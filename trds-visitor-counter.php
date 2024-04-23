@@ -2,7 +2,7 @@
 /*
 Plugin Name: TRDS Website Visitor Counter
 Description: This plugin counts daily and monthly visits and provides a shortcode to display the counts on any part of the site. It also allows customization of the visitor count display options.
-Version: 1.0
+Version: 1.1
 Author: Arnel Go
 */
 
@@ -42,12 +42,11 @@ function custom_visitor_count_shortcode()
     $views_alignment = get_option('custom_visitor_views_alignment', 'left');
 
     $output = '<div class="elementor-shortcode">';
-    $output .= '<div id="mvcwid" style="text-align: ' . $input_alignment . '; color: ' . $input_color . ';">';
-    $output .= '<h3 class="wps_visitor_title">' . $input_text . '</h3>';
-    //$output .= '<div id="wpsvccount">' . $daily_count . '</div>';
+    $output .= '<div id="mvcwid" style="text-align: ' . esc_attr($input_alignment) . '; color: ' . esc_attr($input_color) . ';">';
+    $output .= '<h3 class="wps_visitor_title">' . esc_html($input_text) . '</h3>';
     $output .= '<div id="wpsvctable">';
-    $output .= '<div id="wpsvcviews" style="text-align: ' . $views_alignment . '; color: ' . $views_color . ';">' . $views_text_today . ' : ' . $daily_count . '</div>';
-    $output .= '<div id="wpsvcviews" style="text-align: ' . $views_alignment . '; color: ' . $views_color . ';">' . $views_text_month . ' : ' . $monthly_count . '</div>';
+    $output .= '<div id="wpsvcviews" style="text-align: ' . esc_attr($views_alignment) . '; color: ' . esc_attr($views_color) . ';">' . esc_html($views_text_today) . ' : ' . esc_html($daily_count) . '</div>';
+    $output .= '<div id="wpsvcviews" style="text-align: ' . esc_attr($views_alignment) . '; color: ' . esc_attr($views_color) . ';">' . esc_html($views_text_month) . ' : ' . esc_html($monthly_count) . '</div>';
     $output .= '</div>';
     $output .= '</div>';
     $output .= '</div>';
