@@ -1,6 +1,6 @@
 # TRDS Website Visitor Counter
 
-This WordPress plugin counts daily and monthly visits and provides a shortcode to display the counts on any part of the site. It also allows customization of the visitor count display options.
+TRDS Website Visitor Counter plugin, now with added functionality to track daily and monthly website visits along with total post count. Customize display options effortlessly using shortcodes
 
 ## Installation
 
